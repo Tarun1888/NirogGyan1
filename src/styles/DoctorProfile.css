@@ -1,0 +1,123 @@
+
+.doctor-profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-header {
+  display: flex;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.profile-image {
+  position: relative;
+  margin-right: 30px;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.profile-info h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.profile-info h2 {
+  font-size: 1.3em;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 30px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.profile-details {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.profile-details h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.contact-item {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.contact-item strong {
+  color: #333;
+}
+
+.availability-info p {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.profile-actions {
+  padding: 30px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.book-btn {
+  padding: 15px 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .profile-details {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .profile-stats {
+    justify-content: center;
+  }
+}
