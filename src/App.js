@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import DoctorProfile from './pages/DoctorProfile';
 import BookAppointment from './pages/BookAppointment';
 import Login from './pages/Login';
-import Signup from './pages/Signup'; // wrong case
+import Signup from './pages/Signup'; 
 import './App.css';
 
 function App() {

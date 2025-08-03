@@ -11,13 +11,11 @@ function AppointmentForm({ doctor, onSubmit, loading }) {
   });
   const [errors, setErrors] = useState({});
 
-  // Generate available time slots
+
   const timeSlots = [
     '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
     '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00'
   ];
-
-  // Get minimum date (today)
   const today = new Date().toISOString().split('T')[0];
 
   const validateForm = () => {
@@ -52,7 +50,7 @@ function AppointmentForm({ doctor, onSubmit, loading }) {
       [name]: value
     }));
     
-    // Clear error when user starts typing
+
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,

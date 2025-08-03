@@ -1,4 +1,4 @@
-// ======== server.js =========
+
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
@@ -11,13 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = 'my_secret_key';
 
-// Middleware
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// SQLite DB
 const db = new sqlite3.Database('./data.db', (err) => {
   if (err) {
     console.error('Failed to connect to DB:', err.message);
@@ -150,7 +148,6 @@ app.get('/api/doctors', authenticateToken, (req, res) => {
   });
 });
 
-// New: Get doctor by ID
 app.get('/api/doctors/:id', authenticateToken, (req, res) => {
   const { id } = req.params;
 
@@ -193,7 +190,7 @@ app.post('/api/appointments', authenticateToken, (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
 
 process.on('SIGINT', () => {
